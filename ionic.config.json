@@ -1,0 +1,7 @@
+{
+  "name": "ieeensbm",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
