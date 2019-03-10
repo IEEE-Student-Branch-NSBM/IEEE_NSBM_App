@@ -3,8 +3,9 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   { path: '', loadChildren: './tabs/tabs.module#TabsPageModule' },
+  {path:'tab2',loadChildren: './tabs/tab2.module#Tab2PageModule'},
   { path: 'about', loadChildren: './about/about.module#AboutPageModule' },
-  { path: 'news-view', loadChildren: './news-view/news-view.module#NewsViewPageModule' },
+  { path: 'news-view/:id', loadChildren: './news-view/news-view.module#NewsViewPageModule' },
 
   //redirect
   { path: '', redirectTo: '/about', pathMatch: 'full' },

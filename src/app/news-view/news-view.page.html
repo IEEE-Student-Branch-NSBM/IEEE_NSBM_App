@@ -2,22 +2,19 @@
   <ion-toolbar>
     <ion-title>newsView</ion-title>
     <ion-buttons slot="start">
-        <ion-back-button
-            [text]="buttonText"
-            [icon]="buttonIcon">
-        </ion-back-button>
+      <ion-back-button defaultHref=''></ion-back-button>
       </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
     
-    <ion-card class="welcome-card">
+    <ion-card class="welcome-card" *ngFor="let postview of posts | async">
       
         <ion-card-header>
             <ion-row justify-content-center>
                 <ion-col> 
-                  <h2><b>Join IEEE NSBM Student Branch! </b> </h2>
+                  <h2><b>{{postview.Title}} </b> </h2>
                   <ion-card-subtitle>Published Date 24th February 2019</ion-card-subtitle>
                 </ion-col>
              </ion-row>
